@@ -1,0 +1,24 @@
+:root {
+  --color-primary: 	#3e0200;
+  --color-secondary: #ff0000;
+  --color-tertiary: #40e0d0;
+  --color-quaternary: #f59e04;
+
+  --color-grey-light-1: honeydew;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  color: rgba(241, 241, 241, 0.979);
+}
+
+
+body {
+  font-family: sans-serif;
+  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-secondary));
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+

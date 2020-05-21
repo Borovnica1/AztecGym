@@ -1,0 +1,52 @@
+.header {
+  background-color: var(--color-tertiary);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    text-decoration: none;
+    margin: 0 1rem;
+  }
+}
+
+.container {
+  width: 80%;
+  height: 80vh;
+  background-color: lightblue;
+  margin: 0 auto;
+  display: flex;
+}
+
+.sidebar {
+  width: 15%;
+  height: 100%;
+  background-color: greenyellow;
+}
+
+.profile {
+  width: 30%;
+  height: 100%;
+  background-color: orangered;
+}
+
+.feed {
+  width: 56%;
+  height: 100%;
+  background-color: orchid;
+}
+
+.footer {
+  width: 100%;
+  height: 7.2rem;
+  background-color: var(--color-quaternary);
+   &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+   }
+}

@@ -1,0 +1,245 @@
+.btn {
+  text-decoration: none;
+    padding: 1rem;
+    background-color: rgb(36, 36, 36);
+    border-radius: 15px;
+}
+
+.menu {
+  margin-top: 2rem;
+
+  &__item {
+    list-style: none;
+    
+    position: relative;
+
+    &:not(:last-child) {
+      margin-bottom: .2rem;
+    }
+  }
+
+  &__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform: scaleY(0);
+    transition: transform .2s,
+                width .4s cubic-bezier(1,0,0,1) .2s,
+                background-color .1s;
+  }
+
+  &__item:hover::before,
+  &__item--active::before {
+    transform: scaleY(1);
+    width: 100%;
+  }
+
+  &__link {
+    display: flex;
+    text-decoration: none;
+    padding: 1.2rem;
+    color: rgb(240, 240, 240);
+    text-transform: uppercase;
+    font-weight: bold;
+    white-space: nowrap;
+
+
+
+    z-index: 10;
+    position: relative;
+
+    & > i {
+      color: inherit;
+      margin-right: 1rem;
+    }
+  }
+
+}
+
+.profile {
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__picture {
+    border: 3px solid rgb(48, 48, 48);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: 0% 0%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  &__username {
+    background-color: rgba(206, 203, 203, 0.377);
+    padding: .7rem;
+    border-radius: 12px;
+  }
+
+  &__desc {
+    background-color: rgba(206, 203, 203, 0.377);
+    padding: .7rem;
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+
+  &__gallery {
+    margin-bottom: 1.5rem;
+    width: 280px;
+  }
+
+  &__photo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+  }
+
+  &__action {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: blue;
+
+    & [class^="fa"] {
+      margin-right: 7px;
+      color: inherit;
+    }
+  }
+
+  &__add-friend {
+    box-shadow: 5px 5px 5px black;
+    transition: .1s;
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+
+  &__message {
+    box-shadow: 5px 5px 5px black;
+    transition: .1s;
+
+    &:hover {
+      background-color: var(--color-tertiary);
+    }
+  }
+}
+
+.blog {
+  padding: 0 2rem;
+  margin-top: 2rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(240, 255, 240, 0.11);
+      transform: scale(1.03, 1.2);
+      border-radius: 20px;
+    }
+  }
+
+  &__photo {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 5;
+    transition: .2s;
+
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+
+  &__user {
+    display: flex;
+    position: relative;
+    z-index: 11;
+  }
+
+  &__author {
+    text-decoration: underline;
+    margin-right: 2rem;
+  }
+
+  &__rating {
+    margin-right: 2rem;
+    margin-top: -1rem;
+  }
+
+  &__arrows {
+    position: relative;
+    display: flex;
+
+
+    & [class^="fa"] {
+      font-size: 1.3rem;
+    }
+
+    & .fa-arrow-up {
+      position: absolute;
+      left: 10%;
+      top: 150%;
+
+      & > span {
+        position: absolute;
+        top: 100%;
+        left: -30%;
+      }
+    }
+    & .fa-arrow-down {
+      position: absolute;
+      right: 10%;
+      top: 150%;
+
+      & > span {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+      }
+    }
+
+    
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__thumbnail {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 20px;
+  }
+
+  &__text {
+    padding: 1rem;
+    display: table-column;
+    columns: 2;
+    column-rule: 2px solid rgba(77, 77, 77, 0.315);
+    
+  }
+
+}
